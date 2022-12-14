@@ -1,0 +1,5 @@
+mlflow==1.30.0
+jupytext==1.14.2
+jupyter-tensorboard==0.2.0
+jupyterhub==3.1.0
+primehub-python-sdk==0.3.8

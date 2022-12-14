@@ -7,7 +7,8 @@ FROM $BASE_CONTAINER
 ARG NB_USER="jovyan"
 ARG NB_UID="1000"
 ARG NB_GID="100"
-ARG PRIMEHUB_EXTENSION_VERSION="0.1.4"
+# TODO: Add PrimeHub extension into Jupyterlab
+# ARG PRIMEHUB_EXTENSION_VERSION="0.1.4"
 
 # Change to root user and configure the setting.
 USER root
@@ -103,3 +104,10 @@ RUN chmod -R a+rx /usr/local/bin/
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER
+
+# TODO: Add PrimeHub extension into Jupyterlab
+## PrimeHub jupyterlab extension
+# RUN pip install --no-cache-dir jupyterlab_primehub~=$PRIMEHUB_EXTENSION_VERSION && \
+#     jupyter serverextension enable jupyterlab_primehub && \
+#     jupyter labextension install @infuseai/jupyterlab-primehub@~v$PRIMEHUB_EXTENSION_VERSION && \
+#     jupyter-lab build

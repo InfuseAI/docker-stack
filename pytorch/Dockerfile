@@ -104,11 +104,9 @@ RUN chmod -R a+rx /usr/local/bin/
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER
 
-# # PrimeHub jupyterlab extension
+# TODO: Add PrimeHub extension into Jupyterlab
+## PrimeHub jupyterlab extension
 # RUN pip install --no-cache-dir jupyterlab_primehub~=$PRIMEHUB_EXTENSION_VERSION && \
 #     jupyter serverextension enable jupyterlab_primehub && \
 #     jupyter labextension install @infuseai/jupyterlab-primehub@~v$PRIMEHUB_EXTENSION_VERSION && \
 #     jupyter-lab build
-
-# Put ngc example into $HOME directory
-RUN ln -fsv /workspace $HOME/ngc-example

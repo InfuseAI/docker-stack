@@ -1,4 +1,4 @@
-VERSION := ngc-tensorflow2-22.10-py3
+VERSION := ngc-tensorflow2-22.11-py3
 IMAGE_NAME_BASE=docker-stacks
 IMAGE_BASE=infuseai
 

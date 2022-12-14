@@ -1,10 +1,9 @@
-VERSION := v0.1.0
-IMAGE_NAME_BASE=primehub-examples
-IMAGE_BASE=infuseaidev/${IMAGE_NAME_BASE}
+VERSION := ngc-pytorch-22.11-py3
+IMAGE_NAME_BASE=docker-stacks
+IMAGE_BASE=infuseai
 
 build:
-	docker build . -t ${IMAGE_BASE}:${VERSION}
+	docker build . -t ${IMAGE_BASE}/${IMAGE_NAME_BASE}:${VERSION}
 
 push:
-	docker push ${IMAGE_BASE}:${VERSION}
-
+	docker push ${IMAGE_BASE}/${IMAGE_NAME_BASE}:${VERSION}
